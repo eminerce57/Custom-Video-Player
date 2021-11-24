@@ -1,0 +1,162 @@
+$controls: #fff;
+$buffer-bar: #95a5a6;
+$background: #000;
+
+
+.custom-video-area {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 72em;
+  height: 0;
+  margin: auto;
+  padding-bottom: 56.25%;
+  text-align: left;
+  
+  video {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    bottom: 0;
+    left: -50%;
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    margin: auto;
+  }
+}
+
+.video-controls {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  bottom: 0 !important;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  padding: 0 0 15px 0;
+  transition: all 0.4s ease-in-out;
+  background: rgba($background, 0.5);
+  &.playing {
+    #play-button {
+      &:before {
+   
+   
+        color: $controls;
+      }
+    }
+  }
+  .top-wrapper {
+    display: block;
+  }
+  .bottom-wrapper {
+    padding: 0 20px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .progress-bar {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 10px;
+    margin-bottom: 9px;
+    cursor: pointer;
+    background: rgba($buffer-bar, 0.6);
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 0;
+      height: 100%;
+    }
+    .time-bar {
+      z-index: 10;
+      background: darken($buffer-bar, 20%);
+    }
+    .buffer-bar {
+      z-index: 5;
+      background: rgba($buffer-bar, 0.6);
+    }
+  }
+  #play-button {
+    display: inline-block;
+    width: 24px;
+    cursor: pointer;
+    vertical-align: middle;
+    &:before {
+  
+  
+      color: $controls;
+    }
+  }
+  .time {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 12px;
+    display: inline-block;
+    width: 80px;
+    vertical-align: middle;
+    color: $controls;
+  }
+  .sound-button {
+    display: inline-block;
+    width: 16px;
+    cursor: pointer;
+    vertical-align: middle;
+    &:before {
+   
+      content: '\f027';
+      color: $controls;
+    }
+  }
+  .sound-med {
+    &:before {
+
+      content: '\f028';
+      color: $controls;
+    }
+  }
+  .sound-muted {
+    &:before {
+   
+      content: '\f026';
+      color: $controls;
+    }
+  }
+  .volume {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 70px;
+    height: 4px;
+    cursor: pointer;
+    vertical-align: middle;
+    border-radius: 10px;
+    background-color: rgba($controls, 0.6);
+    .volume-bar {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      display: block;
+      height: 100%;
+      background-color: $controls;
+    }
+  }
+  .btnFS {
+    position: relative;
+    top: 3px;
+    display: inline-block;
+
+    cursor: pointer;
+    vertical-align: middle;
+    &:before {
+
+      font-size: 14px;
+      content: '\f0b2';
+      color: $controls;
+    }
+  }
+}

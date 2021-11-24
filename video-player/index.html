@@ -10,20 +10,48 @@
     <link href="css/feather.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>EMİN ERCE Video Player</title>
-
 </head>
 <body class="d-flex justify-content-center align-items-center" style="background-color: #2f3640 !important;"> 
 
 
+    
 
 
-<!-- Video source -->
-<video controls="controls"  class="video-player" >
-        <source src="assets/video.mp4"  type="video/mp4" />
-</video>
+<div class="custom-video-area" id="custom-video">
+
+    <div class="video-controls control">
+      <div class="top-wrapper">
+        <div class="progress-bar">
+          <span class="buffer-bar"></span>
+          <span class="time-bar"></span>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12">
+          <div class="bottom-wrapper" >
+            <span class="feather-play" style="color: #fff;"  id="play-button"></span>
+            <div class="time" >
+              <span class="current">00:00</span> / <span class="duration">00:00</span>
+            </div>
+            <span class="feather-volume" style="color: #fff; margin-right: 5px" id="sound-button"></span>
+            <div class="volume" title="Set volume">
+              <span class="volume-bar"></span>
+            </div>
+            <span class="feather-maximize" id="btnFS" style="color: #fff; margin-left: auto;" title="Switch to full screen"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <video class="video-element" id="video-element" preload="auto">
+    <source src="assets/video.mp4">
+    </video>
+  
+  </div>
 
 
-<!-- <span class="feather-bar-chart"></span> -->
+
 
 
 
