@@ -9,6 +9,10 @@
   text-align: left;
 }
 
+.custom-video-area .current, .custom-video-area .duration {
+  font-size: 13px;
+}
+
 .custom-video-area video {
   position: absolute;
   top: 0;
@@ -29,10 +33,10 @@
   left: 0;
   width: 100%;
   margin: auto;
-  padding: 0 0 15px 0;
+  padding: 0 0 7px 0;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(52, 73, 94, 0.5);
 }
 
 .video-controls.playing #play-button:before {
@@ -45,6 +49,7 @@
 
 .video-controls .bottom-wrapper {
   padding: 0 20px 0 20px;
+  font-size: large;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,7 +104,7 @@
 .video-controls .time {
   font-size: 11px;
   font-weight: 600;
-  line-height: 12px;
+  line-height: auto;
   display: inline-block;
   width: 80px;
   vertical-align: middle;
@@ -119,12 +124,10 @@
 }
 
 .video-controls .sound-med:before {
-  content: '\f028';
   color: #fff;
 }
 
 .video-controls .sound-muted:before {
-  content: '\f026';
   color: #fff;
 }
 

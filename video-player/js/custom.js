@@ -1,9 +1,9 @@
 $(".custom-video-area").each(function() {
-    // Video
+    
     var $video_container = $(this);
     var $video = $(this).find("#video-element");
   
-    // Video Controls
+    // Video Controls root
     var $video_controls = $(this).find(".video-controls");
     var $button_controls = $(this).find(".bottom-wrapper");
     var $progress_bar = $(this).find(".progress-bar");
@@ -11,20 +11,20 @@ $(".custom-video-area").each(function() {
     var $buffer_bar = $(this).find(".buffer-bar");
     var $play_button = $(this).find("#play-button");
     var $mute_button = $(this).find("#sound-button");
-  
     var $volume_wrapper = $(this).find(".volume");
     var $volume_bar = $(this).find(".volume-bar");
-  
     var $full_screen_btn = $(this).find("#btnFS");
     var $current = $(this).find(".current");
     var $duration = $(this).find(".duration");
     var $fast_fwd = $(this).find("#fastFwd");
   
-    // Toggles play/pause for the video
+  
     function playVideo() {
 
 
 
+
+     
       if ($video[0].paused) {
         $video[0].play();
         $video_controls.addClass("playing");
@@ -57,7 +57,7 @@ $(".custom-video-area").each(function() {
         $percentage = 0;
       }
   
-      //update volume bar and video volume
+      //volume
       $volume_bar.css("width", $percentage + "%");
       $video[0].volume = $percentage / 100;
   
@@ -134,12 +134,12 @@ $(".custom-video-area").each(function() {
       setTimeout(startBuffer, 150);
     });
   
-    // Play/pause on video click
+    // play/pause
     $video.click(function() {
       playVideo();
     });
   
-    // Video duration timer
+    // time
     $video.on("timeupdate", function() {
       $current.text(time_format($video[0].currentTime));
       $duration.text(time_format($video[0].duration));
@@ -149,17 +149,14 @@ $(".custom-video-area").each(function() {
       $progress.css("width", perc + "%");
     });
   
-    /* VIDEO CONTROLS
-          ------------------------------------------------------- */
-  
-    // Hide button controls when video is playing
+
     $video_container.on("mouseleave", function() {
       if ($video[0].paused === false) {
         $video_container.addClass("playing");
       }
     });
   
-    // Show button controls on hover
+
     $video_container.on("mouseover", function() {});
   
     // Play/pause on button click
@@ -167,12 +164,12 @@ $(".custom-video-area").each(function() {
       playVideo();
     });
   
-    // Fast Forward Button
+    // Fast 
     $fast_fwd.click(function() {
       changeSpeed();
     });
   
-    // Volume Drag
+    // Volume 
     var volumeDrag = false;
     $volume_wrapper.on("mousedown", function(e) {
       volumeDrag = true;
@@ -212,9 +209,7 @@ $(".custom-video-area").each(function() {
       launchFullscreen();
     });
   
-    // VIDEO PROGRESS BAR
-    //when video timebar clicked
-    var timeDrag = false; /* check for drag event */
+    var timeDrag = false; 
     $progress_bar.on("mousedown", function(e) {
       timeDrag = true;
       updatebar(e.pageX);
