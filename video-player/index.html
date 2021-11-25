@@ -39,7 +39,17 @@
             <div class="volume" title="Set volume">
               <span class="volume-bar"></span>
             </div>
-            <span class="feather-settings" style="color: #fff; margin-left: auto;margin-right:15px; " onclick="setting()" title="Switch to full screen"></span> 
+            <span class="feather-more-vertical" style="color: #fff; margin-left: auto; margin-right:15px;" onclick="speed()"  title="Switch to full screen"></span> 
+            <div class="drop-speed-custom" id="settings" >
+              <ul class="list-group">
+                <li class="list-group-item">0-50      <input type="radio" value="0-50" id="050s" name="speed"></li>
+                <li class="list-group-item">0.75      <input type="radio" value="0-75" id="075s" name="speed"></li>
+                <li class="list-group-item "><strong>1  &nbsp;&nbsp;&nbsp;       </strong><input type="radio" value="normal" id="normal" name="speed"></li>
+                <li class="list-group-item">1.25      <input type="radio" value="1-25" id="125s" name="speed"></li>
+                <li class="list-group-item">1.50      <input type="radio" value="1-50" id="150s" name="speed"></li>
+              </ul>
+            </div>
+            <span class="feather-settings" style="color: #fff; margin-right:15px; " onclick="setting()" title="Switch to full screen"></span> 
             <div class="drop-custom" id="settings" >
               <ul class="list-group">
                 <li class="list-group-item">720p <input type="radio" value="720" id="720p" name="quality"></li>

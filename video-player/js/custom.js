@@ -71,15 +71,7 @@ $(".custom-video-area").each(function() {
       }
     }
   
-    function changeSpeed() {
-      if ($video[0].playbackRate === 1) {
-        $video[0].playbackRate = 2;
-        $fast_fwd.text("2x Speed");
-      } else if ($video[0].playbackRate === 2) {
-        $video[0].playbackRate = 1;
-        $fast_fwd.text("1x Speed");
-      }
-    }
+
   
     function launchFullscreen() {
       if ($video[0].requestFullscreen) {
@@ -165,9 +157,7 @@ $(".custom-video-area").each(function() {
     });
   
     // Fast 
-    $fast_fwd.click(function() {
-      changeSpeed();
-    });
+  
   
     // Volume 
     var volumeDrag = false;
@@ -234,7 +224,7 @@ $(".custom-video-area").each(function() {
 $(".drop-custom").toggleClass('visible');
   }
 // RADİO BUTTON QUALİTY SELECT
-  $('input[type=radio]').change(function() {
+  $('input[type=radio][name=quality]').change(function() {
     //video time value
     var vid = document.getElementById("video-element");
     var time = (vid.currentTime);
@@ -263,9 +253,48 @@ $(".drop-custom").toggleClass('visible');
 
 });
 
+function speed(){
 
-$(function() {
+  $(".drop-speed-custom").toggleClass('visible');
+  
+}
+
+$('input[type=radio][name=speed]').change(function() {
+  //video  value
+  var vid = document.getElementById("video-element");
+  //example
+  if (this.value =='0-50') {//if value 0-50
+    vid.playbackRate = 0.50; //video  playbackrate 50 
+  } 
+  
+ if (this.value =='0-75') {
+    vid.playbackRate = 0.75;
+   
+  }
+
+if (this.value =='normal') {
+    vid.playbackRate = 1;
+   
+  }
+
+ if (this.value =='1-25') {
+    vid.playbackRate = 1.25;
+   
+  }
+
+  if (this.value =='1-50') {
+    vid.playbackRate = 1.50;
+   
+  }
 
 
+  
 
 });
+
+
+
+
+
+
+
