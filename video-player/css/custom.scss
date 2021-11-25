@@ -1,11 +1,26 @@
 $controls: #fff;
-$buffer-bar: #95a5a6;
-$background: #34495e;
+$buffer-bar: #3d3d3d;
+$background: #3d3d3d;
 
 .visible{
 
 display: block !important;
 }
+
+.hidden{
+
+
+  display: none !important;
+  }
+  
+
+  #play-button-banner{
+  position: absolute;
+  font-size: 100px;
+  bottom: 310px;
+  cursor:pointer;
+  
+  }
 
 .list-group .list-group-item{
 background-color:#2f3640 !important;
@@ -41,13 +56,14 @@ height: fit-content;
 }
 
 .custom-video-area {
+  
   position: relative;
   overflow: hidden;
   width: 100%;
   max-width: 72em;
   height: 0;
   margin: auto;
-  padding-bottom: 56.25%;
+  padding-bottom: 49%;
   text-align: left;
   
 
@@ -80,6 +96,7 @@ height: fit-content;
   padding: 0 0 7px 0;
   transition: all 0.4s ease-in-out;
   background: rgba($background, 0.5);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   &.playing {
     #play-button {
       &:before {
@@ -91,6 +108,7 @@ height: fit-content;
     display: block;
   }
   .bottom-wrapper {
+    
     padding: 0 20px 0 20px;
     font-size: large;
     display: flex;

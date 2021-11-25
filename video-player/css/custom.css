@@ -2,6 +2,17 @@
   display: block !important;
 }
 
+.hidden {
+  display: none !important;
+}
+
+#play-button-banner {
+  position: absolute;
+  font-size: 100px;
+  bottom: 310px;
+  cursor: pointer;
+}
+
 .list-group .list-group-item {
   background-color: #2f3640 !important;
   color: #fff;
@@ -44,7 +55,7 @@
   max-width: 72em;
   height: 0;
   margin: auto;
-  padding-bottom: 56.25%;
+  padding-bottom: 49%;
   text-align: left;
 }
 
@@ -75,7 +86,9 @@
   padding: 0 0 7px 0;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  background: rgba(52, 73, 94, 0.5);
+  background: rgba(61, 61, 61, 0.5);
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .video-controls.playing #play-button:before {
@@ -107,7 +120,7 @@
   height: 10px;
   margin-bottom: 9px;
   cursor: pointer;
-  background: rgba(149, 165, 166, 0.6);
+  background: rgba(61, 61, 61, 0.6);
 }
 
 .video-controls .progress-bar span {
@@ -121,12 +134,12 @@
 
 .video-controls .progress-bar .time-bar {
   z-index: 10;
-  background: #617374;
+  background: #0a0a0a;
 }
 
 .video-controls .progress-bar .buffer-bar {
   z-index: 5;
-  background: rgba(149, 165, 166, 0.6);
+  background: rgba(61, 61, 61, 0.6);
 }
 
 .video-controls #play-button {

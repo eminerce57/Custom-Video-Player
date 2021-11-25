@@ -10,6 +10,7 @@ $(".custom-video-area").each(function() {
     var $progress = $(this).find(".time-bar");
     var $buffer_bar = $(this).find(".buffer-bar");
     var $play_button = $(this).find("#play-button");
+    var $play_button_1 = $(this).find("#play-button-banner");
     var $mute_button = $(this).find("#sound-button");
     var $volume_wrapper = $(this).find(".volume");
     var $volume_bar = $(this).find(".volume-bar");
@@ -20,7 +21,7 @@ $(".custom-video-area").each(function() {
   
   
     function playVideo() {
-
+      $("#play-button-banner").toggleClass("hidden");
 
 
 
@@ -29,7 +30,7 @@ $(".custom-video-area").each(function() {
         $video[0].play();
         $video_controls.addClass("playing");
         $("#play-button").attr("class","feather-pause");
-  
+        
         if ($video_container.parents(".video-header").length) {
           $video_container.parents(".video-header").addClass("playing");
         
@@ -38,6 +39,7 @@ $(".custom-video-area").each(function() {
         $video[0].pause();
         $video_controls.removeClass("playing");
         $("#play-button").attr("class","feather-play");
+        
         $video_container.parents(".video-header").removeClass("playing");
       }
     }
@@ -155,6 +157,9 @@ $(".custom-video-area").each(function() {
     $play_button.click(function() {
       playVideo();
     });
+    $play_button_1.click(function() {
+      playVideo();
+    });
   
     // Fast 
   
@@ -222,6 +227,7 @@ $(".custom-video-area").each(function() {
   // dropdown toggle
   function setting(){
 $(".drop-custom").toggleClass('visible');
+
   }
 // RADİO BUTTON QUALİTY SELECT
   $('input[type=radio][name=quality]').change(function() {
@@ -256,7 +262,7 @@ $(".drop-custom").toggleClass('visible');
 function speed(){
 
   $(".drop-speed-custom").toggleClass('visible');
-  
+  $(".drop-custom").toggleClass('hidden');
 }
 
 $('input[type=radio][name=speed]').change(function() {
@@ -292,9 +298,31 @@ if (this.value =='normal') {
 
 });
 
+function change() {
+  
+  var file = $('#file-poster').val();
+  var result = file.split("\\");
+  var file_name = result[2];
+  console.log(file_name)
+  localStorage.setItem('file_text', file_name);
+   
 
 
+  
+  
+  
 
+  
+  
+}
+
+
+$( document ).ready(function() {
+  
+  var result_file = localStorage.getItem('file_text');
+
+ $("#video-element").attr('poster', 'image/'+result_file);
+});
 
 
 
