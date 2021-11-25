@@ -2,6 +2,23 @@ $controls: #fff;
 $buffer-bar: #95a5a6;
 $background: #34495e;
 
+.visible{
+
+display: block !important;
+}
+
+.drop-custom{
+position: absolute;
+display: none;
+z-index: 123;
+right: 90px;
+bottom: 40px;
+background-color: $controls;
+width: fit-content;
+height: fit-content;
+
+
+}
 
 .custom-video-area {
   position: relative;

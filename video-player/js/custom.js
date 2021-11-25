@@ -228,4 +228,23 @@ $(".custom-video-area").each(function() {
   
 
   });
-  
+
+  // dropdown toggle
+  function setting(){
+$(".drop-custom").toggleClass('visible');
+  }
+// RADİO BUTTON QUALİTY SELECT
+  $('input[type=radio]').change(function() {
+    if (this.value == '720') {
+   
+    }
+
+    else if (this.value == '480') {
+   
+    }
+    else if (this.value == '360 ') {
+   
+
+
+    }
+});

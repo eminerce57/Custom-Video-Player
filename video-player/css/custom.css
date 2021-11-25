@@ -1,3 +1,22 @@
+.visible {
+  display: block !important;
+}
+
+.drop-custom {
+  position: absolute;
+  display: none;
+  z-index: 123;
+  right: 90px;
+  bottom: 40px;
+  background-color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .custom-video-area {
   position: relative;
   overflow: hidden;
