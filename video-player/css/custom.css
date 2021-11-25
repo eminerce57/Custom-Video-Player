@@ -59,7 +59,8 @@
   text-align: left;
 }
 
-.custom-video-area .current, .custom-video-area .duration {
+.custom-video-area .current,
+.custom-video-area .duration {
   font-size: 13px;
 }
 
@@ -171,7 +172,7 @@
 }
 
 .video-controls .sound-button:before {
-  content: '\f027';
+  content: "\f027";
   color: #fff;
 }
 
@@ -215,7 +216,7 @@
 
 .video-controls .btnFS:before {
   font-size: 14px;
-  content: '\f0b2';
+  content: "\f0b2";
   color: #fff;
 }
 /*# sourceMappingURL=custom.css.map */
