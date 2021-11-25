@@ -235,22 +235,30 @@ $(".drop-custom").toggleClass('visible');
   }
 // RADİO BUTTON QUALİTY SELECT
   $('input[type=radio]').change(function() {
+    //video time value
+    var vid = document.getElementById("video-element");
+    var time = (vid.currentTime);
+  
     if (this.value == '720') {
-
-
       $("#video-element").html("    <source id='video-source'   src='assets/video.mp4'>");
       document.getElementById("video-element").load();
+      document.getElementById('video-element').play();
+      vid.currentTime = time
     }
     if (this.value == '480') {
-    
-      $("#video-element").html("    <source id='video-source'   src='assets/video480.mp4'>");
-      document.getElementById("video-element").load();
+    //example 
+      $("#video-element").html("    <source id='video-source'   src='assets/video480.mp4'>"); // new 480p video upload
+      document.getElementById("video-element").load();// video load
+      document.getElementById('video-element').play();// video reload
+      vid.currentTime = time// to resume the video from the second
     }
      if (this.value == '360') {
 
       $("#video-element").html("    <source id='video-source'   src='assets/video360.mp4'>");
       document.getElementById("video-element").load();
-
+      document.getElementById('video-element').play();
+      vid.currentTime = time
+      
     }
 
 });
