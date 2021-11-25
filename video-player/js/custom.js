@@ -236,15 +236,28 @@ $(".drop-custom").toggleClass('visible');
 // RADİO BUTTON QUALİTY SELECT
   $('input[type=radio]').change(function() {
     if (this.value == '720') {
-   
-    }
-
-    else if (this.value == '480') {
-   
-    }
-    else if (this.value == '360 ') {
-   
 
 
+      $("#video-element").html("    <source id='video-source'   src='assets/video.mp4'>");
+      document.getElementById("video-element").load();
     }
+    if (this.value == '480') {
+    
+      $("#video-element").html("    <source id='video-source'   src='assets/video480.mp4'>");
+      document.getElementById("video-element").load();
+    }
+     if (this.value == '360') {
+
+      $("#video-element").html("    <source id='video-source'   src='assets/video360.mp4'>");
+      document.getElementById("video-element").load();
+
+    }
+
+});
+
+
+$(function() {
+
+
+
 });
