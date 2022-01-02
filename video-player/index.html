@@ -80,9 +80,21 @@
 
 
   <div class="container mt-5 text-white">
-    <h6>Change Video Player poster</h6>
-    <input type="file" id="file-poster"><br><br>
-    <button onclick="change()" class="btn btn-info">Change</button>
+    <h6>Change Video Player poster</h6><p class="text-danger text-sm-left">just image folder</p>
+ 
+
+    <div class="input-group mb-5 ">
+      <div class="custom-file">
+
+        <input type="file" class="custom-file-input" id="file-poster"  >
+        <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+
+      </div>
+
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" onclick="change()" type="button">Change </button>
+      </div>
+    </div>
 
   </div>
 
